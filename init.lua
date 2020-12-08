@@ -2,7 +2,7 @@ local discordia = require('discordia')
 local client = discordia.Client()
 
 client:on('ready', function()
-    print('Logged in as ' .. client.user.username)
+    print('Final               | \27[1m\27[32m[INFO]\27[0m    | Logged in as ' .. client.user.username)
 end)
 
 client:on('messageCreate', function(message)
@@ -20,7 +20,10 @@ client:on('messageCreate', function(message)
         message.channel:send('https://github.com/DieracDelta/nix_home_manager_configs')
     end
     if message.content == '!ygentoo' then
-        message.channel:send('Because')
+        file = io.open('content/ygentoo', 'r')
+        io.input(file)
+        message.channel:send(io.read())
+        io.close(file)
     end
     if message.content == '!ynix' then
         message.channel:send('Because')
