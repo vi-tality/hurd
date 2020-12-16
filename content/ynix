@@ -1,0 +1,17 @@
+Why NixOS?
+
+1. Reproducible - produces exactly the same build every time.
+2. Unless early boot is broken, boots to a consistent state.
+3. Can easily rollback to the previous system configuration state.
+4. Declarative config FOR EVERYTHING!
+5. Integration with a whole bunch of packages. Your beloved GUI rices included.
+6. Cloud integration. Brilliant Docker images, also magic like NixOps
+7. Portability - Nix runs on Linux and macOS, and takes 5 minutes to install (clone config and you're done).
+8. Free of side effects - Actually uninstalls packages and its dependencies
+9. Bleeding and stable - Can run multiple versions of the package without conflicts
+10. Implicit containerization - Lorri and direnv make switching between project-local tooling easy.
+11. Virtual Machines - VFIO is EASY to set up and perform declaratively (much more so than arch).
+12. Kernel hacking - Kernel flags and patches are easy to add to config.
+13. Use flags + source-based - each package has overrides to allow (or disallow) features to be built. Makes for a lean mean machine. Binary caching for speed.
+
+TL;DR: as bleeding edge as Arch, as stable as Ubuntu, as flexible as Gentoo. How can you say no? https://nixos.org/#asciinema-demo-cover

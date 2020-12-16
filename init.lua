@@ -20,13 +20,23 @@ client:on('messageCreate', function(message)
         message.channel:send('https://github.com/DieracDelta/nix_home_manager_configs')
     end
     if message.content == '!ygentoo' then
-        file = io.open('content/ygentoo', 'r')
+        file = io.open('content/ygentoo', 'rb')
         io.input(file)
-        message.channel:send(io.read())
+        for i = 1, 19 do
+            message.channel:send(io.read())
+        end
         io.close(file)
     end
     if message.content == '!ynix' then
-        message.channel:send('Because')
+        file = io.open('content/ynix', 'rb')
+        io.input(file)
+        for i = 1, 19 do
+            message.channel:send(io.read())
+        end
+        io.close(file)
+    end
+    if message.content == '!q' then
+        message.user.roles.add('Vimmer')
     end
 end)
 

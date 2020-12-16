@@ -4,3 +4,4 @@ deps/
 
 Session.vim
 .undodir
+.env
