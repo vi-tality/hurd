@@ -1,6 +1,6 @@
 Why NixOS?
 
-1. Reproducible - produces exactly the same build every time.
+1. Reproducible - produces exactly the same build every time sans compiler nondeterminism.
 2. Unless early boot is broken, boots to a consistent state.
 3. Can easily rollback to the previous system configuration state.
 4. Declarative config FOR EVERYTHING!
@@ -13,5 +13,12 @@ Why NixOS?
 11. Virtual Machines - VFIO is EASY to set up and perform declaratively (much more so than arch).
 12. Kernel hacking - Kernel flags and patches are easy to add to config.
 13. Use flags + source-based - each package has overrides to allow (or disallow) features to be built. Makes for a lean mean machine. Binary caching for speed.
+14. Flakes are sheer awesomesauce.
+  1) Pin builds to commits allows for effortless extreme mixing and matching between stable and unstable and anywhere in between. Use what you know is stable, and pin the bleeding edge down to stable commits.
+  2) Multiple outputs allow a monolithic repo to manage all your configurations in one place.
+  3) Custom sources! Declaratively manage everything with a `flake.nix` in it and nix will know exactly how to build or override a package.
+  4) Can apply arbitrary patches to package builds before building. Not sure why you would want this, but it's possible :flushed:
 
 TL;DR: as bleeding edge as Arch, as stable as Ubuntu, as flexible as Gentoo. How can you say no? https://nixos.org/#asciinema-demo-cover
+
+Want to get started? https://nixcloud.io/tour/?id=1 and https://scrive.github.io/nix-workshop/ are good introductions to the language.
